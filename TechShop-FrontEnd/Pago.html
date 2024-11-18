@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pago</title>
+    <link rel="stylesheet" href="Css/Pago.css"> 
+</head>
+<body>
+    <header>
+        <h1>TechShop</h1>
+    </header>
+
+    <section class="resumen-pedido">
+        <h2>Resumen del Pedido</h2>
+        <table id="orderSummary">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los productos del carrito se mostrarán aquí dinámicamente -->
+            </tbody>
+        </table>
+
+        <div class="total">
+            <p>Subtotal: $<span id="subtotalAmount">0.00</span></p>
+            <p>Envío: $<span id="shippingCost">0.00</span></p>
+            <p><strong>Total a pagar: $<span id="totalAmount">0.00</span></strong></p>
+        </div>
+    </section>
+
+    <section class="metodo-pago">
+        <h2>Método de Pago</h2>
+    
+        <div class="webpay-simulado">
+            <h3>Pagar con Webpay Simulado</h3>
+            <p>Ingresa los detalles de tu tarjeta para continuar.</p>
+    
+            <form id="webpayForm" onsubmit="procesarPago(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre en la tarjeta:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="numTarjeta">Número de tarjeta:</label>
+                    <input type="text" id="numTarjeta" maxlength="16" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaExp">Fecha de expiración:</label>
+                    <input type="text" id="fechaExp" placeholder="MM/AA" maxlength="5" pattern="\d{2}/\d{2}" required title="Formato: MM/AA (ejemplo: 05/23)">
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" maxlength="3" required>
+                </div>
+                <button type="submit">Pagar</button>
+            </form>
+    
+            <div id="mensajePago" class="mensaje-pago"></div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>© 2024 TechShop - Todos los derechos reservados</p>
+        <div class="redes-sociales">
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://twitter.com">Twitter</a> |
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="Js/Pago.js"></script>
+</body>
+</html>

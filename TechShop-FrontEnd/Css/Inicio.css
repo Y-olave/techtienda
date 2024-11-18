@@ -1,0 +1,297 @@
+/* Estilos generales */
+body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    font-weight: bold;
+    height: 80px;
+    background: linear-gradient(to bottom, #5e3a35, #202734);
+    width: 100vw;
+    box-sizing: border-box;
+    border-bottom: 2px solid #444; 
+}
+
+h1 {
+    padding: 10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+li {
+    margin: 0 20px; 
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    position: relative; 
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #e73c3c; 
+    transition: width 0.3s ease, left 0.3s ease; 
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+a:hover {
+    color: #e74c3c; 
+}
+
+/* Estilos para el banner */
+.banner {
+    background-image: url('images/banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Para posicionar el overlay */
+}
+
+/* Filtro de fondo */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro */
+    z-index: 1; /* Asegura que el overlay esté detrás del contenido */
+}
+
+.banner-content {
+    position: relative; /* Para que el contenido esté sobre el overlay */
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo Oscuro */
+    border: 5px solid #b92929; /* Borde Rojo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para el contenedor */
+    animation: fadeIn 1s ease-in-out; /* Animación al entrar */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-content h2 {
+    font-size: 48px; 
+    margin: 0;
+    color: #2980b9; /* Color del texto del título */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.banner-content p {
+    font-size: 20px;
+    color: #ffffff; /* Color del texto descriptivo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.btn {
+    background-color: #b92929; /* Color del botón */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para el botón */
+}
+
+.btn:hover {
+    background-color: #921f1f; /* Color del botón al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Efecto de sombra más fuerte */
+}
+
+/* Estilos para productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    justify-items: center;
+    margin: 0 auto;
+    padding: 0 5%;
+    margin-bottom: 50px; 
+}
+
+.producto {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.producto img {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.producto p {
+    margin: 15px 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.producto button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Estilos para las ofertas */
+.oferta button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.oferta button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+
+.ofertas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    justify-items: center;
+    margin: 0 auto;
+    padding: 0 5%;
+    margin-bottom: 50px;
+}
+
+.oferta {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.oferta:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.oferta img {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.oferta p {
+    margin: 15px 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.oferta p.precio-original {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Estilos del footer */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #202734;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para redes sociales */
+.redes-sociales a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}

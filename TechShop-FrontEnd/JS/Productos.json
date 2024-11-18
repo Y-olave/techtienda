@@ -1,0 +1,203 @@
+[
+  {
+    "id": "1",
+    "nombre": "Desktop Gamer AMD Ryzen 5 7600X",
+    "imagen": "img/PCGAMER 1.jpeg",
+    "descripcion": "Desktop Gamer AMD Ryzen 5 7600X 16GB RAM 1TB SSD NVIDIA GeForce RTX 4060",
+    "precio": 1399990,
+    "caracteristicas": {
+      "tipo": "Desktop Gamer",
+      "procesador": "AMD Ryzen 5 7600X",
+      "ram": "16GB",
+      "almacenamiento": "1TB SSD",
+      "grafica": "NVIDIA GeForce RTX 4060"
+    }
+  },
+  {
+    "id": "2",
+    "nombre": "Desktop Gamer Intel Core I5-9400F",
+    "imagen": "img/PCGAMER 2.png",
+    "descripcion": "Desktop Gamer Intel Core I5-9400F 2.9Ghz 16GB RAM Nvidia GTX 1660s",
+    "precio": 549990,
+    "caracteristicas": {
+      "tipo": "Desktop Gamer",
+      "procesador": "Intel Core I5-9400F 2.9Ghz",
+      "ram": "16GB",
+      "almacenamiento": "512GB SSD",
+      "grafica": "Nvidia GTX 1660s"
+    }
+  },
+  {
+    "id": "3",
+    "nombre": "Desktop Alienware Aurora R13",
+    "imagen": "img/PCGAMER 3.png",
+    "descripcion": "Desktop Alienware Aurora R13 Intel i7-12700KF 16GB RAM NVIDIA GeForce RTX3080",
+    "precio": 2449990,
+    "caracteristicas": {
+      "tipo": "Desktop Gamer",
+      "procesador": "Intel i7-12700KF",
+      "ram": "16GB",
+      "almacenamiento": "1TB SSD",
+      "grafica": "NVIDIA GeForce RTX 3080"
+    }
+  },
+  {
+    "id": "4",
+    "nombre": "Monitor Gamer Master G 24\"",
+    "imagen": "img/Monitor Gamer 1.png",
+    "descripcion": "Monitor Gamer Master G 24\" Full HD 180Hz Panel VA MGMG2430",
+    "precio": 134990,
+    "caracteristicas": {
+      "tipo": "Monitor Gamer",
+      "marca": "Master G",
+      "tamaño": "24\"",
+      "hz": "180Hz",
+      "panel": "VA"
+    }
+  },
+  {
+    "id": "5",
+    "nombre": "Monitor Gamer Master G Curvo 27\"",
+    "imagen": "img/Monitor Gamer 2.png",
+    "descripcion": "Monitor Gamer Master G Curvo 27\" Full HD 180Hz Panel VA MGMG2730C",
+    "precio": 162990,
+    "caracteristicas": {
+      "tipo": "Monitor Gamer Curvo",
+      "marca": "Master G",
+      "tamaño": "27\"",
+      "hz": "180Hz",
+      "panel": "VA"
+    }
+  },
+  {
+    "id": "6",
+    "nombre": "Monitor 27\" UltraWide",
+    "imagen": "img/Monitor 3.png",
+    "descripcion": "Monitor 27\" UltraWide - WFHD, Panel IPS, 75Hz, FreeSync, HDR10 (21:9) (26WQ500-B)",
+    "precio": 198990,
+    "caracteristicas": {
+      "tipo": "Monitor UltraWide",
+      "tamaño": "27\"",
+      "hz": "75Hz",
+      "panel": "IPS",
+      "extras": ["FreeSync", "HDR10"]
+    }
+  },
+  {
+    "id": "7",
+    "nombre": "Laptop Gamer ASUS ROG Zephyrus G14",
+    "imagen": "img/Laptop 1.png",
+    "descripcion": "Laptop Gamer ASUS ROG Zephyrus G14 16GB RAM 1TB SSD",
+    "precio": 1049990,
+    "caracteristicas": {
+      "tipo": "Laptop Gamer",
+      "procesador": "AMD Ryzen 9",
+      "ram": "16GB",
+      "almacenamiento": "1TB SSD",
+      "grafica": "NVIDIA GeForce RTX 2070"
+    }
+  },
+  {
+    "id": "8",
+    "nombre": "Laptop Gamer TUF A15",
+    "imagen": "img/Laptop 2.png",
+    "descripcion": "Laptop Gamer TUF A15 AMD Ryzen 5 7535HS NVIDIA GeForce RTX 2050 8GB RAM",
+    "precio": 640190,
+    "caracteristicas": {
+      "tipo": "Laptop Gamer",
+      "procesador": "AMD Ryzen 5 7535HS",
+      "ram": "8GB",
+      "almacenamiento": "512GB SSD",
+      "grafica": "NVIDIA GeForce RTX 2050"
+    }
+  },
+  {
+    "id": "9",
+    "nombre": "Laptop Lenovo Ideapad Slim 5",
+    "imagen": "img/Laptop 3.png",
+    "descripcion": "Laptop Lenovo Ideapad Slim 5 Intel Core i7-13620H 16.0\" WUXGA IPS 16GB 512GB",
+    "precio": 824490,
+    "caracteristicas": {
+      "tipo": "Laptop",
+      "procesador": "Intel Core i7-13620H",
+      "ram": "16GB",
+      "almacenamiento": "512GB",
+      "pantalla": "WUXGA IPS"
+    }
+  },
+  {
+    "id": "10",
+    "nombre": "Audífono JBL Gamer Quantum 100",
+    "imagen": "img/Audifono 1.png",
+    "descripcion": "Audífono JBL Gamer Quantum 100",
+    "precio": 28890,
+    "caracteristicas": {
+      "tipo": "Audífono Gamer",
+      "marca": "JBL"
+    }
+  },
+  {
+    "id": "11",
+    "nombre": "Audífono HyperX Gamer Cloud Stinger Core 2 PS5 Blanco",
+    "imagen": "img/Audifono 2.png",
+    "descripcion": "Audífono HyperX Gamer Cloud Stinger Core 2 PS5 Blanco",
+    "precio": 41190,
+    "caracteristicas": {
+      "tipo": "Audífono Gamer",
+      "marca": "HyperX",
+      "color": "Blanco"
+    }
+  },
+  {
+    "id": "12",
+    "nombre": "Teclado Gamer HyperX Alloy Core RGB",
+    "imagen": "img/TECLADO 1.png",
+    "descripcion": "Teclado Gamer HyperX Alloy Core RGB Membrana Español USB",
+    "precio": 51590,
+    "caracteristicas": {
+      "tipo": "Teclado Gamer",
+      "marca": "HyperX",
+      "idioma": "Español",
+      "conexion": "USB",
+      "iluminacion": "RGB"
+    }
+  },
+  {
+    "id": "13",
+    "nombre": "Mouse Gamer KATAR PRO XT",
+    "imagen": "img/Mouse 1.png",
+    "descripcion": "Mouse Gamer KATAR PRO XT Backlit RGB LED Antideslizante",
+    "precio": 36090,
+    "caracteristicas": {
+      "tipo": "Mouse Gamer",
+      "marca": "KATAR PRO",
+      "iluminacion": "RGB LED"
+    }
+  },
+  {
+    "id": "14",
+    "nombre": "Batería Xiaomi Externa 18W",
+    "imagen": "img/Cargador portatil.png",
+    "descripcion": "Batería Xiaomi Externa 18W 20.000 mAh Carga Rápida Negro",
+    "precio": 19990,
+    "caracteristicas": {
+      "tipo": "Cargador portátil",
+      "marca": "Xiaomi",
+      "capacidad": "20.000 mAh",
+      "color": "Negro",
+      "potencia": "18W"
+    }
+  },
+  {
+    "id": "15",
+    "nombre": "Soporte Monitor Articulado",
+    "imagen": "img/Soporte monitor.png",
+    "descripcion": "Soporte Monitor Articulado 13\"- 32\" Pulg Movimiento Completo Macrotel",
+    "precio": 19990,
+    "caracteristicas": {
+      "tipo": "Soporte de monitor",
+      "marca": "Macrotel",
+      "rango_tamaño": "13\" - 32\""
+    }
+  }
+]

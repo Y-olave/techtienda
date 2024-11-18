@@ -1,0 +1,307 @@
+/* Estilos generales */
+body {
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1c1c1c;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos del encabezado */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  font-weight: bold;
+  height: 80px; /* Añadir altura al encabezado */
+  background: linear-gradient(to bottom, #5e3a35, #202734);
+  width: 100vw; /* Asegurar que el encabezado ocupe todo el ancho */
+  box-sizing: border-box; /* Incluir padding y border en el ancho total */
+  border-bottom: 2px solid #444; 
+}
+
+header h1 {
+  padding: 10px; /* Añadir padding al h1 */
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center; /* Centrar el texto del encabezado */
+  margin: 0; /* Asegurar que no haya margen */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+}
+
+nav li {
+  margin: 0 20px; /* Margen entre los elementos de la lista */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  position: relative; 
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: #e73c3c; 
+  transition: width 0.3s ease, left 0.3s ease; 
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav a:hover {
+  color: #e74c3c; 
+}
+
+
+/* Estilos del carrito */
+h2 {
+  text-align: center;
+  margin: 40px 0; /* Aumentar el margen superior para mayor separación */
+  font-size: 28px;
+  color: white;
+}
+
+#cartTable {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cartTable th,
+#cartTable td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#cartTable th {
+  background-color: #5e3a35;
+  color: white;
+}
+
+#cartTable td {
+  background-color: #2c2c2c;
+  border-bottom: 1px solid #444;
+}
+
+/* Estilos para la imagen del producto */
+#cartTable td:first-child {
+  width: 100px;
+}
+
+#cartTable img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Estilos de cantidad */
+#cartTable input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Botón eliminar */
+#cartTable button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#cartTable button:hover {
+  background-color: #c0392b;
+}
+
+/* Estilos para la sección de opciones de envío */
+.shipping-container {
+  width: 90%;
+  margin: 20px auto; /* Asegúrate de tener el mismo margen */
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  border: 2px solid #444; /* Añadir borde similar al del carrito */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+}
+
+.shipping-container h3 {
+  font-size: 24px;
+  color: #fdfdfd;
+}
+
+/* Tabla de opciones de envío */
+.shipping-options {
+  margin-top: 20px;
+}
+
+.shipping-options table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shipping-options th,
+.shipping-options td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.shipping-options th {
+  background-color: #5e3a35;
+  color: white;
+}
+
+.shipping-options td {
+  background-color: #2c2c2c;
+}
+
+/* Estilo de las etiquetas */
+.shipping-container label {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  color: white;
+}
+
+/* Estilos para la dirección de despacho */
+.address-container {
+  margin-top: 20px;
+}
+
+.address-container input,
+.address-container select {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c2c2c;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.address-container input:disabled,
+.address-container select:disabled {
+  opacity: 0.5;
+}
+
+/* Estilos del total y botón de pago */
+.total-container {
+  width: fit-content; /* Cambiar de 90% a fit-content para ajustar al contenido */
+  margin: 20px auto; 
+  text-align: center;
+  background-color: #2c2c2c;
+  padding: 10px; /* Reducir padding para ajustar el tamaño del borde */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.total-container h3 {
+  font-size: 18px; /* Ajustar el tamaño de la fuente */
+  color: #faf9f6;
+}
+
+.total-container .total-amount {
+  font-size: 18px; /* Ajustar el tamaño de la fuente */
+  margin-bottom: 10px; /* Reducir margen para más cohesión */
+}
+
+.total-container button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Reducir el padding para un tamaño más pequeño */
+  font-size: 18px; /* Ajustar el tamaño de la fuente */
+  cursor: pointer;
+  border-radius: 10px; /* Aumentar el borde redondeado */
+  transition: background-color 0.3s ease;
+}
+
+.total-container button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilos del footer */
+footer {
+  margin-top: 40px; /* Aumentar el margen superior para separar del total */
+  padding: 20px;
+  background-color: #202734;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  font-size: 16px;
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #888; 
+}
+
+/* Estilos para redes sociales */
+.redes-sociales a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  #cartTable,
+  .shipping-container,
+  .total-container {
+    width: 95%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Carrito.css">
+    <title>Carrito de Compras - TechShop</title>
+</head>
+<body>
+    <header>
+        <h1>TechShop</h1>
+        <nav>
+            <ul>
+                <li><a href="Inicio de sesion.html">Inicio sesión</a></li>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li>
+                    <a href="Carrito.html">
+                        <img src="img/shopping-cart.png" alt="Carrito" style="width: 24px; height: 24px; vertical-align: middle;">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <h2>Tu carrito</h2>
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se mostrarán los productos -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Opciones de Envío -->
+        <div class="shipping-container">
+            <h3>Opciones de Envío</h3>
+            <div class="shipping-options">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Opción de Envío</th>
+                            <th>Costo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="shippingOption">Envío a domicilio</td>
+                            <td id="shippingCost">$5.000</td>
+                            <td id="shippingDescription">Envio a todo el pais.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="address-container">
+                <h4>Región:</h4>
+                <select id="regionSelect">
+                    <option value="Metropolitana">Región Metropolitana</option>
+                    <option value="Valparaíso">Región de Valparaíso</option>
+                    <option value="Biobío">Región del Biobío</option>
+                    <option value="La Araucanía">Región de La Araucanía</option>
+                </select>
+                
+                <h4>Selecciona tu comuna:</h4>
+                <select id="communeSelect">
+                    <option value="Santiago">Santiago</option>
+                    <option value="Las Condes">Las Condes</option>
+                    <option value="Providencia">Providencia</option>
+                    <option value="La Florida">La Florida</option>
+                    <option value="Puente Alto">Puente Alto</option>
+                    <option value="Recoleta">Recoleta</option>
+                </select>
+
+                <h4>Ingrese tu dirección:</h4>
+                <input type="text" id="addressInput" placeholder="Dirección" required>
+
+                <h4>Número de calle:</h4>
+                <input type="text" id="streetNumberInput" placeholder="Número" required>
+            </div>
+        </div>
+
+        <!-- Total y Proceder a pagar -->
+        <div class="total-container">
+            <h3>Subtotal: <span id="subtotal">$0.00</span></h3>
+            <h3>Costo de Envío: <span id="shippingCost">$5.000</span></h3>
+            <h3>Total: <span id="totalPrice">$0.00</span></h3>
+            <button onclick="redirigirPago()">Proceder a pagar</button>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechShop. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="JS/Carrito.js"></script>
+</body>
+</html>

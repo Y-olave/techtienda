@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    font-weight: bold;
+    height: 80px;
+    background: linear-gradient(to bottom, #5e3a35, #202734);
+    width: 100vw;
+    box-sizing: border-box;
+    border-bottom: 2px solid #444; 
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Estilos del contenido */
+h1, h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resumen-pedido {
+    margin-bottom: 30px;
+}
+
+#orderSummary {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#orderSummary th, #orderSummary td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#orderSummary th {
+    background-color: #f4f4f4;
+}
+
+.total {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.total p {
+    margin: 5px 0;
+}
+
+.metodo-pago {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.webpay-simulado h3 {
+    text-align: center; /* Centrar el título de Webpay */
+    color: #4CAF50; /* Color del título */
+}
+
+.webpay-simulado p {
+    text-align: center; /* Centrar el texto de instrucciones */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre grupos de formularios */
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex; /* Usamos flex para alinear etiqueta e input */
+    justify-content: space-between; /* Espacio entre etiqueta e input */
+    width: 100%;
+    max-width: 400px; /* Máxima anchura para el formulario */
+}
+
+form label {
+    width: 40%; /* Ajustar el ancho de la etiqueta */
+    text-align: left;
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%; /* Ajustar el ancho del input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.mensaje-pago {
+    color: #4CAF50;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilos del pie de página */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #202734;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    bottom: 0;
+}

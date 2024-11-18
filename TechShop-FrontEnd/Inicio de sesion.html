@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="Css/InicioSesion.css">
+</head>
+<body style="background-image: url('img/Setup\ Gamer1.jpg'); 
+             background-size: 100% 100%; 
+             background-position: center; 
+             background-repeat: no-repeat;">
+    <header>
+        <h1>TechShop</h1>
+    </header>
+    <div class="contenedor">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <h2 id="titulo-form">Iniciar sesión</h2>
+        <div class="formularios">
+            <form id="form-login" class="formulario" style="display:block;" action="../backend/procesar_formulario.php" method="POST">
+                <input type="hidden" name="action" value="login">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="role">Seleccionar rol:</label>
+                <select id="role" name="role">
+                    <option value="cliente">Cliente</option>
+                    <option value="admin">Administrador</option>
+                </select>
+
+                <button type="submit">Iniciar sesión</button>
+                <p><a id="registrarse" href="#">Registrarse</a> | <a id="recuperar" href="#">Recuperar contraseña</a></p>
+            </form>
+
+            <form id="form-registro" class="formulario" style="display:none;" action="../backend/procesar_formulario.php" method="POST">
+                <input type="hidden" name="action" value="register">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <label for="email">Ingrese correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password-registro">Ingrese clave:</label>
+                <input type="password" id="password-registro" name="password-registro" required>
+                <label for="password-repetir">Repita clave:</label>
+                <input type="password" id="password-repetir" name="password-repetir" required>
+                <button type="submit">Registrarse</button>
+                <p><a id="iniciar-sesion" href="#">Iniciar sesión</a></p>
+            </form>
+            <form id="form-recuperar" class="formulario" style="display:none;" action="../backend/procesar_formulario.php" method="POST">
+                <input type="hidden" name="action" value="recover">
+                <label for="email-recuperar">Ingrese su correo electrónico:</label>
+                <input type="email" id="email-recuperar" name="email-recuperar" required>
+                <button type="submit">Enviar enlace de recuperación</button>
+                <p><a id="volver-login" href="#">Volver a Iniciar sesión</a></p>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TechShop. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('.formulario').on('submit', function(e) {
+                e.preventDefault();
+                var form = $(this);
+                $.ajax({
+                    url: form.attr('action'),
+                    type: form.attr('method'),
+                    data: form.serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.success) {
+                            alert(response.message);
+                            // Aquí puedes redirigir al usuario o realizar otras acciones
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('Ocurrió un error. Por favor, intenta de nuevo.');
+                    }
+                });
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Cliente</title>
+    <link rel="stylesheet" href="Css/PanelCliente.css">
+</head>
+<body>
+    <header>
+        <h1>Panel del Cliente - TechShop</h1>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Volver a Inicio</a></li> 
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="info-personal">
+        <h2>Información Personal</h2>
+        <form id="form-info">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+            
+            <button type="submit">Actualizar Información</button>
+        </form>
+    </section>
+
+    <section class="historial-compras">
+        <h2>Historial de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Fecha de Compra</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán las compras del cliente -->
+                <tr>
+                    <td>Tarjeta Gráfica QuantumRender GTX 5000</td>
+                    <td>15/09/2024</td>
+                    <td>Enviado</td>
+                </tr>
+                <!-- Más compras -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="pedidos">
+        <h2>Pedidos Actuales</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán los pedidos activos del cliente -->
+                <tr>
+                    <td>Monitor 4K UltraWide</td>
+                    <td>En preparación</td>
+                    <td><button>Cancelar Pedido</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TechShop. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
